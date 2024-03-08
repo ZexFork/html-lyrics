@@ -148,7 +148,7 @@
 	padding: 20px;
 	margin: auto;
 	width: 50%;
-	background-color: white;
+	background-color: black;
 }
 .tampil-body button {
 	cursor: pointer;
@@ -162,11 +162,17 @@
 	color: white;
 	padding: 10px;
 }
-
 </style>
 </head>
 <body>
-<audio autoplay src="https://raw.githubusercontent.com/ZexFork/html-lyrics/main/lagu.mp3"></audio>
+<div class="tampil" id="tampil">
+		<div class="tampil-body">
+			<div>
+				<button onclick="linkaud();">LANJUTKAN</button>
+			</div>
+		</div>
+</div>
+<!--<audio autoplay src="https://raw.githubusercontent.com/ZexFork/html-lyrics/main/lagu.mp3"></audio>-->
   <div id="container"></div>
   <a href="" class="hidden"></a>
   	<div class="wrapper">
@@ -184,12 +190,8 @@
     </div>
   </div>
  <script>
-	 var a = document.getElementById('tampil');
-		function putarmusic(){
-			var audio = new Audio('lagu.mp3');
-			audio.play();
-		}
-	 putarmusic()
+   var a = document.getElementById('tampil');
+   function gasin(){
   	var fontSize = 40;
   	if (window.screen.width > 700) 
   		fontSize = 55 ;
@@ -282,7 +284,13 @@
   			}
   		});
   	});
-
+   }
+   function linkaud(){
+     a.style.display = "none";
+       	audio = new Audio('https://raw.githubusercontent.com/ZexFork/html-lyrics/main/lagu.mp3');
+     audio.play()
+     gasin()
+   }
   </script>
 </body>
 </html>
