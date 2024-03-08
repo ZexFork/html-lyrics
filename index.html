@@ -131,7 +131,15 @@
 </style>
 </head>
 <body>
-
+<div class="tampil" id="tampil">
+		<div class="tampil-body">
+			<div>
+				<h1>Apakah anda robot?</h1>
+				<p>Tekan "LANJUTKAN" jika anda bukan robot.</p>
+				<button onclick=" putarmusic()">LANJUTKAN</button>
+			</div>
+		</div>
+</div>
   <div id="container"></div>
   <a href="" class="hidden"></a>
   	<div class="wrapper">
@@ -149,6 +157,12 @@
     </div>
   </div>
  <script>
+	 var a = document.getElementById('tampil');
+		function putarmusic(){
+			a.style.display = "none";
+			var audio = new Audio('songweb.mp3');
+			audio.play();
+		}
   	var fontSize = 40;
   	if (window.screen.width > 700) 
   		fontSize = 55 ;
